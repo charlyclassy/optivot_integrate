@@ -1,0 +1,36 @@
+# DepotWatt behind an HTTPS reverse proxy (Caddy obtains the certificate automatically).
+#
+#   1. Point your domain's DNS at this server.
+#   2. Set DEPOTWATT_DOMAIN below (or in a .env file next to this one).
+#   3. docker compose up -d --build
+#   4. Create the platform owner once:
+#        docker compose exec app python scripts/create_owner.py --email you@company.com --name "Your Name"
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    environment:
+      DEPOTWATT_ENV: production
+      DEPOTWATT_STATE_DIR: /state
+    volumes:
+      - depotwatt_state:/state          # database and customer uploads (back this up)
+      - depotwatt_models:/app/models    # active and archived model packages
+    expose:
+      - "8501"
+
+  proxy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    command: caddy reverse-proxy --from ${DEPOTWATT_DOMAIN:-localhost} --to app:8501
+    volumes:
+      - caddy_data:/data
+
+volumes:
+  depotwatt_state:
+  depotwatt_models:
+  caddy_data:

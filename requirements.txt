@@ -1,0 +1,17 @@
+# Runtime (versions used for the delivered model, tests and screenshots)
+xgboost==3.4.1
+scikit-learn==1.9.1
+streamlit==1.65.0
+pandas==3.0.6
+numpy==2.5.3
+plotly==7.1.0
+openpyxl==3.1.5
+reportlab==5.0.1
+
+# Development
+pytest==9.1.1
+# Optional, only for scripts/capture_screenshots.py:
+# playwright==1.63.0
+
+# Optivolt LSTM forecasting and saved Keras models
+tensorflow>=2.16,<2.22

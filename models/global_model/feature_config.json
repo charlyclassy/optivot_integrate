@@ -1,0 +1,78 @@
+{
+  "sampling_minutes": 15,
+  "lookback_days": 14,
+  "target": "demand_ratio_next_step",
+  "lag_minutes": [
+    15,
+    30,
+    45,
+    60,
+    120,
+    1440,
+    2880,
+    10080
+  ],
+  "delta_minutes": [
+    15,
+    60
+  ],
+  "rolling_mean_minutes": [
+    60,
+    240,
+    1440
+  ],
+  "rolling_std_minutes": [
+    60,
+    1440
+  ],
+  "rolling_max_minutes": [
+    1440
+  ],
+  "rolling_min_minutes": [
+    1440
+  ],
+  "same_time_mean_days": [
+    7
+  ],
+  "calendar": [
+    "hour",
+    "hour_sin",
+    "hour_cos",
+    "day_of_week",
+    "is_weekend",
+    "month"
+  ],
+  "depot_features": [
+    "depot_load_factor",
+    "depot_scale_log"
+  ],
+  "feature_schema_version": 1,
+  "feature_names": [
+    "lag_15min",
+    "lag_30min",
+    "lag_45min",
+    "lag_60min",
+    "lag_120min",
+    "lag_1440min",
+    "lag_2880min",
+    "lag_10080min",
+    "delta_15min",
+    "delta_60min",
+    "roll_mean_60min",
+    "roll_mean_240min",
+    "roll_mean_1440min",
+    "roll_std_60min",
+    "roll_std_1440min",
+    "roll_max_1440min",
+    "roll_min_1440min",
+    "same_time_mean_7d",
+    "hour",
+    "hour_sin",
+    "hour_cos",
+    "day_of_week",
+    "is_weekend",
+    "month",
+    "depot_load_factor",
+    "depot_scale_log"
+  ]
+}

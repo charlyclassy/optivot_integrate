@@ -1,0 +1,21 @@
+evaluation,scope,model,mae_kw,rmse_kw,peak_mae_kw,windows,actual_breaches,alerts,tp,fp,fn,breach_recall,false_alarm_ratio,lead_time_mean_h,lead_time_median_h,lead_time_min_h,nmae,capacity_kw
+chronological_holdout,All depots,XGBoost,5.3172,12.2497,14.4806,683,144,80,36,44,108,0.25,0.55,12.7708,14.0,0.0,0.6214,
+chronological_holdout,All depots,Baseline (previous day),6.52,16.9421,18.8704,683,144,293,81,212,63,0.5625,0.7235,14.7469,14.25,0.0,0.762,
+chronological_holdout,Bexleyheath,XGBoost,2.6708,3.8395,5.5548,76,32,23,15,8,17,0.4688,0.3478,14.3667,14.25,10.25,0.8406,17.0
+chronological_holdout,Bexleyheath,Baseline (previous day),3.0789,5.3523,7.887,76,32,44,18,26,14,0.5625,0.5909,14.3611,14.25,10.25,0.9691,17.0
+chronological_holdout,Dartford,XGBoost,4.4254,6.7247,8.2474,77,11,29,9,20,2,0.8182,0.6897,13.5556,14.0,10.75,0.5291,45.0
+chronological_holdout,Dartford,Baseline (previous day),5.9449,9.6433,14.2102,77,11,30,7,23,4,0.6364,0.7667,13.9286,14.0,13.25,0.7108,45.0
+chronological_holdout,Islington,XGBoost,3.0741,4.5547,6.3817,75,30,22,10,12,20,0.3333,0.5455,10.3,7.25,5.5,0.9771,13.0
+chronological_holdout,Islington,Baseline (previous day),3.2278,5.6882,8.0308,75,30,42,19,23,11,0.6333,0.5476,10.75,12.0,5.5,1.0259,13.0
+chronological_holdout,Mount Pleasant,XGBoost,19.1409,32.7692,62.7439,77,12,0,0,0,12,0.0,,,,,0.5826,260.0
+chronological_holdout,Mount Pleasant,Baseline (previous day),23.5793,45.2539,78.7497,77,12,26,9,17,3,0.75,0.6538,20.0278,19.5,19.25,0.7177,260.0
+chronological_holdout,Orpington,XGBoost,2.1438,2.873,4.0221,77,14,1,1,0,13,0.0714,0.0,0.0,0.0,0.0,1.1066,14.0
+chronological_holdout,Orpington,Baseline (previous day),2.2022,3.9751,6.4457,77,14,30,3,27,11,0.2143,0.9,9.6667,13.0,0.0,1.1367,14.0
+chronological_holdout,Premier Park,XGBoost,4.8685,8.3589,14.9051,76,10,1,0,1,10,0.0,1.0,,,,0.5391,70.0
+chronological_holdout,Premier Park,Baseline (previous day),5.9841,11.5304,20.2706,76,10,31,7,24,3,0.7,0.7742,14.5,14.25,12.25,0.6626,70.0
+chronological_holdout,Whitechapel,XGBoost,4.1665,7.2499,16.0158,74,10,1,1,0,9,0.1,0.0,19.25,19.25,19.25,0.5719,55.0
+chronological_holdout,Whitechapel,Baseline (previous day),5.7734,10.9596,17.562,74,10,44,7,37,3,0.7,0.8409,19.6071,19.5,19.0,0.7924,55.0
+chronological_holdout,Camden,XGBoost,2.4992,3.8562,6.9464,76,23,0,0,0,23,0.0,,,,,0.8088,21.0
+chronological_holdout,Camden,Baseline (previous day),3.0074,5.2785,10.301,76,23,37,9,28,14,0.3913,0.7568,16.6111,17.75,14.25,0.9733,21.0
+chronological_holdout,Victoria,XGBoost,4.6684,5.9765,4.9002,75,2,3,0,3,2,0.0,1.0,,,,0.6001,29.0
+chronological_holdout,Victoria,Baseline (previous day),5.6474,7.5406,5.4603,75,2,9,2,7,0,1.0,0.7778,18.375,18.375,18.25,0.7259,29.0
