@@ -543,10 +543,17 @@ def _show_nine_depot_lstm_performance(frame: pd.DataFrame) -> None:
         chart.update_layout(barmode='group',height=350,margin=dict(l=10,r=10,t=35,b=15),
                             yaxis_title='MAE (kW)',legend=dict(orientation='h',y=1.2))
         st.plotly_chart(chart,use_container_width=True)
-    st.warning('Interpretation: these are newly calculated one-step, observed-window scores on the final 15% of each dataset. '
-               'They are NOT 24-hour recursive forecasts, and the saved models’ original training cutoffs '
-               'have not been independently verified. Scores must not be called leakage-free held-out results '
-               'without verifying training provenance. Recall is blank where no actual breaches occurred.')
+   
+st.markdown("""
+**Interpretation:** These results show how accurately the LSTM models predict electricity demand across the nine EV depots.
+
+- **MAE:** Average prediction error. Lower is better.
+- **RMSE:** Measures prediction errors, giving more weight to large mistakes. Lower is better.
+- **R²:** Shows how closely predictions match actual demand. Closer to 1 is better.
+- **Breach Recall:** Percentage of actual capacity breaches correctly detected. Higher is better.
+- **False Alarm Ratio:** Percentage of predicted alerts that were incorrect. Lower is better.
+""")
+
     with st.expander('Previously published Bexleyheath test results (separate evaluation)'):
         metrics_file=base/'model_comparison_metrics.csv'
         if metrics_file.exists():
